@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Desain Rumah - Eksklusif & Standar</title>
+
+  <!-- FONT POPPINS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #ffde9d;
+      --primary-light: #ffebb9;
+      --primary-dark: #e6c88d;
+      --dark: #1a1a1a;
+      --dark-transparent: rgba(26, 26, 26, 0.85);
+      --light: #ffffff;
+      --gray: #f5f5f5;
+      --transition: all 0.3s ease;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --gradient: linear-gradient(135deg, #ffde9d, #ff9d9d, #bd1b1b);
+    }
+
+    * { 
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; 
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                  url("https://images.unsplash.com/photo-1600585154340-9635a1bcd44c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80") center/cover fixed;
+      color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HEADER */
+    header {
+      padding: 120px 0 80px;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffde9d' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      z-index: -1;
+    }
+
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-weight: 700;
+      font-size: 3.5rem;
+      letter-spacing: 1px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px rgba(255, 216, 137, 0.5);
+      animation: fadeInDown 1s ease;
+      position: relative;
+      display: inline-block;
+    }
+
+    header h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: var(--gradient);
+      border-radius: 4px;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--primary);
+      color: var(--dark);
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 5px 15px rgba(255, 222, 157, 0.3);
+      animation: fadeInUp 1s ease 0.5s both;
+      margin: 5px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: var(--gradient);
+      transition: var(--transition);
+      z-index: -1;
+    }
+
+    .cta-button:hover::before {
+      width: 100%;
+    }
+
+    .cta-button:hover {
+      background: transparent;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 222, 157, 0.4);
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: var(--dark-transparent);
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      position: relative;
+    }
+
+    .logo::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gradient);
+      transition: var(--transition);
+    }
+
+    .logo:hover::after {
+      width: 100%;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-links a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient);
+      transition: var(--transition);
+      z-index: -1;
+    }
+
+    .nav-links a:hover::before {
+      left: 0;
+    }
+
+    .nav-links a:hover {
+      color: var(--dark);
+    }
+
+    .nav-links a.active {
+      background: var(--primary);
+      color: var(--dark);
+    }
+
+    /* FILTER BUTTONS */
+    .filter-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--light);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .filter-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: var(--gradient);
+      transition: var(--transition);
+      z-index: -1;
+    }
+
+    .filter-btn:hover::before, .filter-btn.active::before {
+      width: 100%;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      color: var(--dark);
+      transform: translateY(-2px);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: var(--primary-light);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--gradient);
+      border-radius: 3px;
+    }
+
+    .section-header p {
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.8;
+    }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      transition: var(--transition);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gradient);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+      z-index: 2;
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+    .card:nth-child(5) { animation-delay: 0.5s; }
+    .card:nth-child(6) { animation-delay: 0.6s; }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-color: rgba(255, 222, 157, 0.3);
+    }
+
+    .card-image {
+      height: 350px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover .card-image img {
+      transform: scale(1.05);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--gradient);
+      color: var(--dark);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      z-index: 2;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card-content h3 {
+      color: var(--primary-light);
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-content p {
+      margin-bottom: 20px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    .card-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .card-features span {
+      background: rgba(255, 222, 157, 0.1);
+      color: var(--primary);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255, 222, 157, 0.2);
+      transition: var(--transition);
+    }
+
+    .card-features span:hover {
+      background: rgba(255, 222, 157, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .card-price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .price span {
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: 0.7;
+    }
+
+    .card-button {
+      padding: 10px 20px;
+      background: var(--primary);
+      color: var(--dark);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .card-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: var(--gradient);
+      transition: var(--transition);
+      z-index: -1;
+    }
+
+    .card-button:hover::before {
+      width: 100%;
+    }
+
+    .card-button:hover {
+      background: transparent;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark-transparent);
+      padding: 60px 0 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gradient);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-column h3 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--gradient);
+    }
+
+    .footer-column p {
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: var(--light);
+      text-decoration: none;
+      transition: var(--transition);
+      opacity: 0.8;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+      opacity: 1;
+      transform: translateX(5px);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: var(--light);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-links a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient);
+      transform: scale(0);
+      transition: var(--transition);
+      border-radius: 50%;
+    }
+
+    .social-links a:hover::before {
+      transform: scale(1);
+    }
+
+    .social-links a:hover {
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+
+    .social-links a i {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--primary-light);
+      font-size: 0.9rem;
+    }
+
+    /* SCROLL TO TOP BUTTON */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: var(--dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .scroll-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top:hover {
+      background: var(--primary-light);
+      transform: translateY(-5px);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 100px 0 60px;
+      }
+      
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      header p {
+        font-size: 1.1rem;
+      }
+      
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .nav-links {
+        gap: 15px;
+      }
+      
+      section {
+        padding: 80px 0;
+      }
+      
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .section-header h2 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1>Galeri Properties Rumah</h1>
+        <p>Temukan inspirasi Properties rumah terbaik sesuai dengan kebutuhan dan budget Anda</p>
+        <a href="#RumahEksklusif" class="cta-button">Explorasi Desain</a><br><br>
+        <a href="index.html" class="cta-button"><i class="fas fa-users"></i> Leadership</a>
+        <a href="Dashboard.html" class="cta-button"><i class="fas fa-house-user"></i> Dashboard</a>
+        <a href="Kost.html" class="cta-button"><i class="fas fa-building"></i> Properties Kost</a>
+      </div>
+    </div>
+  </header>
+  
+
+  <nav>
+    <div class="container nav-container">
+      <a href="#" class="logo">Home Design</a>
+      <div class="nav-links">
+        <a href="#RumahEksklusif" class="active"><i class="fas fa-crown"></i> Rumah Exclusive</a>
+        <a href="#RumahStandar"><i class="fas fa-home"></i> Rumah Modern</a>
+        <a href="#Kontak"><i class="fas fa-envelope"></i> Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- RUMAH EKSKLUSIF -->
+  <section id="RumahEksklusif">
+    <div class="container">
+      <div class="section-header">
+        <h2>Rumah Exclusive</h2>
+        <p>Rumah exclusive dengan fasilitas lengkap dan material berkualitas tinggi, dari arsitektur terbaik.</p>
+      </div>
+      
+      <div class="card-grid">
+        <!-- Rumah Eksklusif 1 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/736x/33/6a/fc/336afc1c1df5eafd90025f3aa276a300.jpg" alt="Rumah Eksklusif 1">
+            <div class="card-badge">Premium</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-crown"></i> Rumah Modern Exclusive</h3>
+            <p>Desain rumah minimalis modern dengan struktur tegas dan pencahayaan hangat. Mengutamakan kesan elegan, simple namun mewah, dan memaksimalkan ruang terbuka untuk kenyamanan penghuninya.</p>
+            <div class="card-features">
+              <span>4 Kamar Tidur</span>
+              <span>3 Kamar Mandi</span>
+              <span>Swimming Pool</span>
+              <span>Home Theater</span>
+              <span>Smart Home</span>
+              <span>Garden</span>
+              <span>Mini Gym</span>
+              <span>Home Office</span>
+              <span>AC Central</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 2.5M<span></span></div>
+              <a href="payments.html?type=rumah&id=1" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rumah Eksklusif 2 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/736x/7c/27/91/7c279125ec29eae9ee22059293cd3d0d.jpg" alt="Rumah Eksklusif 2">
+            <div class="card-badge">Luxury</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-crown"></i> Rumah Modern Luxury</h3>
+            <p>Hunian berkelas dengan detail material marmer dan konsep simetris yang megah. Cocok untuk keluarga yang menginginkan kenyamanan premium dan tampilan fisik rumah yang sangat prestisius.</p>
+            <div class="card-features">
+              <span>5 Kamar Tidur</span>
+              <span>4 Kamar Mandi</span>
+              <span>Lift</span>
+              <span>Home Theater</span>
+              <span>Wine Cellar</span>
+              <span>Home Office</span>
+              <span>Balcony</span>
+              <span>Swimming Pool</span>
+              <span>Smart Home</span>
+              <span>AC Cetral</span>
+              <span>Mini Gym</span>
+              <span>Garage</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 6.7M<span></span></div>
+              <a href="payments.html?type=rumah&id=2" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rumah Eksklusif 3 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/736x/b4/c7/3c/b4c73c6fdef39418c4021de8446faa88.jpg" alt="Rumah Eksklusif 3">
+            <div class="card-badge">Industrial</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-crown"></i> Rumah Industrial Exclusive</h3>
+            <p>Mengusung gaya industrial dengan sentuhan alami dan kaca besar yang memberikan pencahayaan optimal. Interior open-space menciptakan suasana modern yang cozy dan eksklusif.</p>
+            <div class="card-features">
+              <span>4 Kamar Tidur</span>
+              <span>3 Kamar Mandi</span>
+              <span>Rooftop Garden</span>
+              <span>Home Gym</span>
+              <span>Smart System</span>
+              <span>Garage</span>
+              <span>Balcony</span>
+              <span>AC Central</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 4.4M<span></span></div>
+              <a href="payments.html?type=rumah&id=3" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rumah Eksklusif 4 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/1200x/23/72/dc/2372dc681f3198173e712cc581642a11.jpg" alt="Rumah Eksklusif 4">
+            <div class="card-badge">Ultra Luxury</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-crown"></i>Modern Luxury Black Box House</h3>
+            <p>Hunian mewah dengan konsep kotak bertingkat berwarna hitam elegan, pencahayaan warm light, dan railing kaca full transparan. Desain ini menonjolkan kesan futuristik dan eksklusif yang memberikan tampilan fasad megah dan sangat prestisius, cocok untuk keluarga modern dengan gaya hidup premium.</p>
+            <div class="card-features">
+              <span>6 Kamar Tidur</span>
+              <span>5 Kamar Mandi</span>
+              <span>AC Central</span>
+              <span>Swimming pool</span>
+              <span>Balcony</span>
+              <span>Smart Home</span>
+              <span>Garage</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 10M<span></span></div>
+              <a href="payments.html?type=rumah&id=4" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rumah Eksklusif 5 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/1200x/59/8a/17/598a1740bb4d7e85b50dd941a7f79aaa.jpg" alt="Rumah Eksklusif 5">
+            <div class="card-badge">Premium</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-crown"></i> Premium White & Black Residence</h3>
+            <p>Desain minimalis premium dengan kombinasi warna putih dan hitam yang tegas, dilengkapi jendela kaca tinggi sebagai focal point utama. Tata ruang simetris dan material batu ekspos memberikan kesan elegan dan kuat, menghadirkan kenyamanan dan estetika arsitektur modern dalam satu kesatuan.</p>
+            <div class="card-features">
+              <span>5 Kamar Tidur</span>
+              <span>4 Kamar Mandi</span>
+              <span>Smart Home</span>
+              <span>Garden</span>
+              <span>Garage</span>
+              <span>AC Central</span>
+              <span>Balcony</span>
+              <span>Swimming pool</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 5M<span></span></div>
+              <a href="payments.html?type=rumah&id=5" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rumah Eksklusif 6 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/1200x/b1/6b/f7/b16bf7fe9cd5d27df5d008c254e2f480.jpg" alt="Rumah Eksklusif 6">
+            <div class="card-badge">Contemporary</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-crown"></i>Contemporary Gray Elite Home</h3>
+            <p>Hunian kontemporer berwarna abu-abu modern dengan detail garis vertikal, balkon kaca, dan pintu utama mewah. Kombinasi material batu dan pencahayaan lembut menciptakan atmosfer rumah eksklusif yang stylish dan berkelas, lengkap dengan area garasi tertutup untuk tampilan yang lebih rapi dan aman.</p>
+            <div class="card-features">
+              <span>4 Kamar Tidur</span>
+              <span>3 Kamar Mandi</span>
+              <span>Balcony</span>
+              <span>Gazebo</span>
+              <span>Swimming</span>
+              <span>Green House</span>
+              <span>Smart Home</span>
+              <span>AC Central</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 2.8M<span></span></div>
+              <a href="payments.html?type=rumah&id=6" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUMAH STANDAR -->
+  <section id="RumahStandar">
+    <div class="container">
+            <div class="section-header">
+        <h2>Rumah Modern</h2>
+        <p>Pilihan rumah dengan harga terjangkau namun tetap nyaman</p>
+      </div>
+      
+      <div class="card-grid">
+        <!-- Rumah Standar 1 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/1200x/ae/25/20/ae25209ba58e9b5c994a47b0df79d68a.jpg" alt="Rumah Standar 1">
+            <div class="card-badge">Type 36</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-home"></i> Rumah Type 36</h3>
+            <p>Desain compact dan fungsional yang mengutamakan efisiensi ruang. Cocok untuk keluarga kecil atau pasangan baru menikah.</p>
+            <div class="card-features">
+              <span>2 Kamar Tidur</span>
+              <span>1 Kamar Mandi</span>
+              <span>Ruang Tamu</span>
+              <span>Dapur</span>
+              <span>Carport</span>
+              <span>AC</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 350jt<span></span></div>
+              <a href="payments.html?type=rumah&id=7" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rumah Standar 2 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/1200x/e7/1f/e9/e71fe936d497fec2a7641fa724161f61.jpg" alt="Rumah Standar 2">
+            <div class="card-badge">Type 45</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-home"></i> Rumah Minimalis Tipe 45</h3>
+            <p>Memiliki tata ruang sederhana namun elegan dengan penataan ruang terbuka untuk memberi kesan lebih luas.</p>
+            <div class="card-features">
+              <span>3 Kamar Tidur</span>
+              <span>2 Kamar Mandi</span>
+              <span>Ruang Keluarga</span>
+              <span>Dapur</span>
+              <span>Taman Depan</span>
+              <span>AC</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 450jt<span></span></div>
+              <a href="payments.html?type=rumah&id=8" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rumah Standar 3 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/1200x/7d/f8/3a/7df83a5dc27e209c32fbcf26fd68bb8e.jpg" alt="Rumah Standar 3">
+            <div class="card-badge">Type 54</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-home"></i> Rumah Modern Tipe 54</h3>
+            <p>Menggabungkan konsep modern dan minimalis, memberikan kenyamanan ekstra dengan ruang keluarga dan outdoor area kecil.</p>
+            <div class="card-features">
+              <span>3 Kamar Tidur</span>
+              <span>2 Kamar Mandi</span>
+              <span>Ruang Makan</span>
+              <span>Dapur</span>
+              <span>Garage</span>
+              <span>AC</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 550jt<span></span></div>
+              <a href="payments.html?type=rumah&id=9" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rumah Standar 4 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/736x/fa/de/59/fade5940f133021dbef95b09bfe90d58.jpg" alt="Rumah Standar 4">
+            <div class="card-badge">Type 70</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-home"></i> Rumah Tipe 70</h3>
+            <p>Rumah yang fleksibel untuk keluarga berkembang, dengan pembagian ruang privat dan publik yang optimal.</p>
+            <div class="card-features">
+              <span>3 Kamar Tidur</span>
+              <span>2 Kamar Mandi</span>
+              <span>Ruang Tamu</span>
+              <span>Dapur + Ruang Makan</span>
+              <span>Carport</span>
+              <span>AC</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 480jt<span></span></div>
+              <a href="payments.html?type=rumah&id=10" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rumah Standar 5 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/736x/4f/f5/00/4ff500fc6155c8c397ecc83ed5f02cc7.jpg" alt="Rumah Standar 5">
+            <div class="card-badge">Klasik</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-home"></i> Rumah Klasik Modern</h3>
+            <p>Desain timeless yang elegan dengan sentuhan klasik pada detail jendela dan atap.</p>
+            <div class="card-features">
+              <span>2 Kamar Tidur</span>
+              <span>1 Kamar Mandi</span>
+              <span>Ruang Keluarga</span>
+              <span>Dapur Kecil</span>
+              <span>Teras</span>
+              <span>AC</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 280jt<span></span></div>
+              <a href="payments.html?type=rumah&id=11" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rumah Standar 6 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/736x/d4/10/33/d410331c697e26b96838b0afe2aa7ffe.jpg" alt="Rumah Standar 6">
+            <div class="card-badge">Skandinavia</div>
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-home"></i> Rumah Skandinavia</h3>
+            <p>Suasana hangat dengan sentuhan kayu dan warna natural. Desain simple, rapi, dan sangat nyaman.</p>
+            <div class="card-features">
+              <span>2 Kamar Tidur</span>
+              <span>1 Kamar Mandi</span>
+              <span>Ruang Multifungsi</span>
+              <span>Dapur Compact</span>
+              <span>Balkon Kecil</span>
+              <span>AC</span>
+            </div>
+            <div class="card-price">
+              <div class="price">Rp 320jt<span></span></div>
+              <a href="payments.html?type=rumah&id=12" class="card-button">Payment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="Kontak">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Rumah Design</h3>
+          <p>Menyediakan inspirasi desain rumah terbaik dengan berbagai pilihan sesuai kebutuhan dan budget Anda.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Kontak Konsultasi Interior</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Jl. Krakatau, Semarang</li>
+            <li><i class="fas fa-phone"></i> +62 851-4711-9574</li>
+            <li><i class="fas fa-envelope"></i> infoproperty@gmail.com</li>
+            <li><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 17:00</li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Kontak Perusahaan</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Jl. Sendang Guwo, Semarang</li>
+            <li><i class="fas fa-phone"></i> +62 878-1568-7403</li>
+            <li><i class="fas fa-envelope"></i> infoproperty@gmail.com</li>
+            <li><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 17:00</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Properties Rumah & Kost | Dilindungi Hak Cipta</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Scroll to top functionality
+    const scrollTopBtn = document.getElementById('scrollTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('active');
+      } else {
+        scrollTopBtn.classList.remove('active');
+      }
+    });
+    
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Active navigation link
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+    
+    // Animation on scroll
+    const cards = document.querySelectorAll('.card');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    cards.forEach(card => {
+      card.style.animationPlayState = 'paused';
+      observer.observe(card);
+    });
+
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const allCards = document.querySelectorAll('.card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filterValue = button.getAttribute('data-filter');
+        
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Filter cards
+        allCards.forEach(card => {
+          if (filterValue === 'all') {
+            card.style.display = 'block';
+          } else {
+            const cardType = card.querySelector('h3 i').className.includes('crown') ? 'eksklusif' : 'standar';
+            if (cardType === filterValue) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+
+    // Add filter buttons to HTML
+    const filterContainer = document.createElement('div');
+    filterContainer.className = 'filter-container';
+    filterContainer.innerHTML = `
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="eksklusif">Rumah Eksklusif</button>
+      <button class="filter-btn" data-filter="standar">Rumah Modern</button>
+    `;
+    
+    // Insert filter buttons after section header
+    const rumahEksklusifSection = document.getElementById('RumahEksklusif');
+    const sectionHeader = rumahEksklusifSection.querySelector('.section-header');
+    sectionHeader.parentNode.insertBefore(filterContainer, sectionHeader.nextSibling);
+
+    // Enhanced animations
+    const enhancedObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      enhancedObserver.observe(card);
+    });
+
+    // Add ripple effect to buttons
+    document.querySelectorAll('.cta-button, .card-button, .filter-btn').forEach(button => {
+      button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
+    // Add CSS for ripple effect
+    const rippleStyle = document.createElement('style');
+    rippleStyle.textContent = `
+      .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+        transform: scale(0);
+        animation: ripple-animation 0.6s linear;
+        pointer-events: none;
+      }
+      
+      @keyframes ripple-animation {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+      
+      .cta-button, .card-button, .filter-btn {
+        position: relative;
+        overflow: hidden;
+      }
+    `;
+    document.head.appendChild(rippleStyle);
+
+    // Add floating animation to cards
+    cards.forEach((card, index) => {
+      card.style.animation = `float 3s ease-in-out ${index * 0.2}s infinite alternate`;
+    });
+
+    // Add CSS for floating animation
+    const floatStyle = document.createElement('style');
+    floatStyle.textContent = `
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+    `;
+    document.head.appendChild(floatStyle);
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add loading animation
+    window.addEventListener('load', function() {
+      document.body.style.opacity = '0';
+      document.body.style.transition = 'opacity 0.5s ease';
+      
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+      }, 100);
+    });
+
+    console.log('Galeri Rumah loaded successfully!');
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Petinggi Perusahaan - Properties Rumah & Kost</title>
+
+  <!-- FONT POPPINS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #ffde9d;
+      --primary-light: #ffebb9;
+      --primary-dark: #bd1b1b;
+      --dark: #1a1a1a;
+      --dark-transparent: rgba(26, 26, 26, 0.85);
+      --light: #ffffff;
+      --gray: #f5f5f5;
+      --transition: all 0.3s ease;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --gradient: linear-gradient(135deg, #ffde9d, #ff9d9d, #bd1b1b);
+    }
+
+    * { 
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; 
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                  url("https://images.unsplash.com/photo-1600585154340-9635a1bcd44c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80") center/cover fixed;
+      color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HEADER */
+    header {
+      padding: 120px 0 80px;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffde9d' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      z-index: -1;
+    }
+
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-weight: 700;
+      font-size: 3.5rem;
+      letter-spacing: 1px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px rgba(255, 216, 137, 0.5);
+      animation: fadeInDown 1s ease;
+      position: relative;
+      display: inline-block;
+    }
+
+    header h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: var(--gradient);
+      border-radius: 4px;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--primary);
+      color: var(--dark);
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 5px 15px rgba(255, 157, 157, 0.3);
+      animation: fadeInUp 1s ease 0.5s both;
+      margin: 5px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: var(--gradient);
+      transition: var(--transition);
+      z-index: -1;
+    }
+
+    .cta-button:hover::before {
+      width: 100%;
+    }
+
+    .cta-button:hover {
+      background: transparent;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 222, 157, 0.4);
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: var(--dark-transparent);
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      position: relative;
+    }
+
+    .logo::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gradient);
+      transition: var(--transition);
+    }
+
+    .logo:hover::after {
+      width: 100%;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-links a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient);
+      transition: var(--transition);
+      z-index: -1;
+    }
+
+    .nav-links a:hover::before {
+      left: 0;
+    }
+
+    .nav-links a:hover {
+      color: var(--dark);
+    }
+
+    .nav-links a.active {
+      background: var(--primary);
+      color: var(--dark);
+    }
+
+    /* LEADERSHIP SECTION */
+    .leadership {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: var(--primary-light);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--gradient);
+      border-radius: 3px;
+    }
+
+    .section-header p {
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.8;
+    }
+
+    /* LEADERSHIP GRID */
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 50px;
+    }
+
+    .leader-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 25px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      transition: var(--transition);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+      text-align: center;
+      padding: 40px 30px 30px;
+      position: relative;
+    }
+
+    .leader-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gradient);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+
+    .leader-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .leader-card:nth-child(1) { animation-delay: 0.1s; }
+    .leader-card:nth-child(2) { animation-delay: 0.2s; }
+    .leader-card:nth-child(3) { animation-delay: 0.3s; }
+
+    .leader-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      border-color: rgba(255, 222, 157, 0.4);
+    }
+
+    /* GAMBAR PROFIL LINGKARAN */
+    .leader-image-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 25px;
+    }
+
+    .leader-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+      box-shadow: 0 10px 25px rgba(255, 222, 157, 0.3);
+      transition: var(--transition);
+      position: relative;
+      z-index: 2;
+    }
+
+    .leader-card:hover .leader-image {
+      transform: scale(1.05);
+      box-shadow: 0 15px 35px rgba(255, 222, 157, 0.5);
+      border-color: var(--primary-light);
+    }
+
+    /* Efek lingkaran dekoratif di belakang foto */
+    .leader-image-container::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border-radius: 50%;
+      background: var(--gradient);
+      opacity: 0.3;
+      z-index: 1;
+      animation: rotate 10s linear infinite;
+    }
+
+    .leader-image-container::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background: var(--gradient) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: 1;
+    }
+
+    .leader-role {
+      display: inline-block;
+      background: var(--gradient);
+      color: var(--dark);
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(255, 222, 157, 0.3);
+    }
+
+    .leader-content h3 {
+      color: var(--primary-light);
+      margin-bottom: 8px;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .leader-title {
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .leader-bio {
+      margin-bottom: 25px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    .leader-stats {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      margin-top: 5px;
+    }
+
+    .leader-contact {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .contact-btn {
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--light);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 25px;
+      text-decoration: none;
+      text-align: center;
+      transition: var(--transition);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      white-space: nowrap;
+    }
+
+    .contact-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: var(--gradient);
+      transition: var(--transition);
+      z-index: -1;
+    }
+
+    .contact-btn:hover::before {
+      width: 100%;
+    }
+
+    .contact-btn:hover {
+      background: transparent;
+      color: var(--dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 222, 157, 0.4);
+    }
+
+    /* ANIMASI ROTASI UNTUK EFEK LINGKARAN */
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark-transparent);
+      padding: 60px 0 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gradient);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-column h3 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--gradient);
+    }
+
+    .footer-column p {
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: var(--light);
+      text-decoration: none;
+      transition: var(--transition);
+      opacity: 0.8;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+      opacity: 1;
+      transform: translateX(5px);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: var(--light);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-links a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient);
+      transform: scale(0);
+      transition: var(--transition);
+      border-radius: 50%;
+    }
+
+    .social-links a:hover::before {
+      transform: scale(1);
+    }
+
+    .social-links a:hover {
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+
+    .social-links a i {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--primary-light);
+      font-size: 0.9rem;
+    }
+
+    /* SCROLL TO TOP BUTTON */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: var(--dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .scroll-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top:hover {
+      background: var(--primary-light);
+      transform: translateY(-5px);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Efek Ripple */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.6);
+      transform: scale(0);
+      animation: ripple-animation 0.6s linear;
+      pointer-events: none;
+    }
+    
+    @keyframes ripple-animation {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    /* Floating Animation */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2.2rem;
+      }
+      
+      .leadership-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 100px 0 60px;
+      }
+      
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      header p {
+        font-size: 1.1rem;
+      }
+      
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .nav-links {
+        gap: 15px;
+      }
+      
+      .leadership {
+        padding: 80px 0;
+      }
+      
+      .leadership-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+      
+      .leader-image-container {
+        width: 180px;
+        height: 180px;
+      }
+    }
+   
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .section-header h2 {
+        font-size: 1.7rem;
+      }
+      
+      .leader-contact {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        max-width: 280px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+      }
+      
+      .leader-image-container {
+        width: 160px;
+        height: 160px;
+      }
+      
+      .leader-stats {
+        flex-direction: column;
+        gap: 15px;
+      }
+      @media (max-width: 576px) {
+       .leader-contact {
+        flex-direction: column;
+        gap: 10px;
+       }
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1>Team Leadership</h1>
+        <p>Biodata Petinggi Perusahaan CEO, CTO, CMO Properties Desain Rumah & Kost.</p>
+        <a href="Dashboard.html" class="cta-button"><i class="fas fa-house-user"></i> Dashboard</a>
+        <a href="Rumah.html" class="cta-button"><i class="fas fa-house-user"></i> Properties Rumah</a>
+        <a href="Kost.html" class="cta-button"><i class="fas fa-building"></i> Properties Kost</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container nav-container">
+      <a href="#" class="logo">Leadership</a>
+      <div class="nav-links">
+        <a href="#leadership" class="active"><i class="fas fa-users"></i> Tim Leadership</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- LEADERSHIP SECTION -->
+  <section class="leadership" id="leadership">
+    <div class="container">
+      <div class="section-header">
+        <h2>Petinggi Perusahaan</h2>
+        <p>Tim eksekutif yang berdedikasi dalam menghadirkan solusi properti terbaik untuk Anda</p>
+      </div>
+      
+      <div class="leadership-grid">
+        <!-- CEO -->
+        <div class="leader-card">
+          <div class="leader-image-container">
+            <img src="ceo.jpeg" alt="CEO" class="leader-image">
+          </div>
+          <div class="leader-content">
+            <span class="leader-role">CEO</span>
+            <h3>Novita Aulia Maharani</h3>
+            <p class="leader-title">Chief Executive Officer</p>
+            <p class="leader-bio">Berbekal pendidikan S1 di Universitas PGRI Semarang, Novita memimpin perusahaan dengan visi kuat untuk menghadirkan hunian berkualitas yang tetap terjangkau, membuka akses bagi lebih banyak masyarakat Indonesia untuk menikmati tempat tinggal yang nyaman dan layak.</p>
+            
+            <div class="leader-stats">
+            </div>
+            
+            <div class="leader-contact">
+              <a href="https://gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> novitaa@gmail.com</a>
+              <a href="https://www.instagram.com/novitaauliamhrn?igsh=bzhpd2V0bmp0NDFq" class="contact-btn"><i class="fab fa-instagram"></i> novitaauliamhrn</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTO -->
+        <div class="leader-card">
+          <div class="leader-image-container">
+            <img src="cto.jpeg" alt="CTO" class="leader-image">
+          </div>
+          <div class="leader-content">
+            <span class="leader-role">CTO</span>
+            <h3>Gizza Hanna Farhataini Hapsari</h3>
+            <p class="leader-title">Chief Technology Officer</p>
+            <p class="leader-bio"> Berbekal pendidikan S1 di Universitas PGRI Semarang dan latar belakang di bidang Informatika, Gizza menghadirkan pendekatan visioner dalam memimpin desain serta arsitektur perusahaan, menghadirkan platform yang inovatif dan berdaya saing tinggi.</p>
+            
+            <div class="leader-stats">
+            </div>
+            
+            <div class="leader-contact">
+              <a href="https://gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> gizzaa@gmail.com</a>
+              <a href="https://www.instagram.com/gizzahnn_?igsh=MTAzbzdtaGg5MTZn" class="contact-btn"><i class="fab fa-instagram"></i> gizzahnn_</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CMO -->
+        <div class="leader-card">
+          <div class="leader-image-container">
+            <img src="cmo.jpeg" alt="CMO" class="leader-image">
+          </div>
+          <div class="leader-content">
+            <span class="leader-role">CMO</span>
+            <h3>Nur Fadhilah</h3>
+            <p class="leader-title">Chief Marketing Officer</p>
+            <p class="leader-bio">Dilah menempuh pendidikan S1 di Universitas PGRI Semarang. Berbekal pendekatan data-driven, ia berhasil merumuskan strategi yang memperkuat identitas perusahaan dan mendorong brand untuk tampil sebagai yang terdepan.</p>
+            
+            <div class="leader-stats">
+            </div>
+            
+            <div class="leader-contact">
+              <a href="https://gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> dilahh@gmail.com</a>
+              <a href="https://www.instagram.com/_diiilaahh?igsh=anljZzAwdm9jMTFu" class="contact-btn"><i class="fab fa-instagram"></i> _diiilaahh</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Properties Rumah & Kost</h3>
+          <p>Perusahaan properti terdepan yang menghubungkan Anda dengan hunian impian melalui inovasi dan pelayanan terbaik.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Kontak Konsultasi Interior</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Jl. Krakatau, Semarang</li>
+            <li><i class="fas fa-phone"></i> +62 851-4711-9574</li>
+            <li><i class="fas fa-envelope"></i> infoproperty@gmail.com</li>
+            <li><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 17:00</li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Tautan Cepat</h3>
+          <ul class="footer-links">
+            <li><a href="Dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="Rumah.html"><i class="fas fa-house-user"></i> Properties Rumah</a></li>
+            <li><a href="Kost.html"><i class="fas fa-building"></i> Properties Kost</a></li>
+            <li><a href="index.html"><i class="fas fa-users"></i> Tim Leadership</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Properties Rumah & Kost | Dilindungi Hak Cipta</p>
+      </div>
+    </div>
+  </footer
+    <div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Scroll to top functionality
+    const scrollTopBtn = document.getElementById('scrollTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('active');
+      } else {
+        scrollTopBtn.classList.remove('active');
+      }
+    });
+    
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Active navigation link
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+    
+    // Animation on scroll for leader cards
+    const leaderCards = document.querySelectorAll('.leader-card');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    leaderCards.forEach(card => {
+      card.style.animationPlayState = 'paused';
+      observer.observe(card);
+    });
+
+    // Enhanced animations for leader cards
+    const enhancedObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.leader-card').forEach(card => {
+      enhancedObserver.observe(card);
+    });
+
+    // Parallax effect for header
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallax = document.querySelector('header');
+      parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+    });
+
+    // Typewriter effect for header
+    const typewriterText = "Tim Leadership";
+    const typewriterElement = document.querySelector('header h1');
+    
+    function typeWriter() {
+      if (typewriterElement.textContent.length < typewriterText.length) {
+        typewriterElement.textContent = typewriterText.substring(0, typewriterElement.textContent.length + 1);
+        setTimeout(typeWriter, 100);
+      }
+    }
+
+    // Start typewriter effect when page loads
+    window.addEventListener('load', () => {
+      typewriterElement.textContent = '';
+      setTimeout(typeWriter, 500);
+    });
+
+    // Counter animation for stats
+    const statValues = document.querySelectorAll('.stat-value');
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const finalValue = target.textContent;
+          
+          // Extract numeric value
+          let value = parseInt(finalValue);
+          if (isNaN(value)) {
+            // Handle percentage values
+            value = parseInt(finalValue.replace('%', ''));
+          }
+          
+          let startValue = 0;
+          const duration = 2000;
+          const increment = value / (duration / 16);
+          
+          const timer = setInterval(() => {
+            startValue += increment;
+            if (startValue >= value) {
+              target.textContent = finalValue;
+              clearInterval(timer);
+            } else {
+              if (finalValue.includes('%')) {
+                target.textContent = Math.floor(startValue) + '%';
+              } else {
+                target.textContent = Math.floor(startValue) + '+';
+              }
+            }
+          }, 16);
+          
+          counterObserver.unobserve(target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    statValues.forEach(stat => {
+      counterObserver.observe(stat);
+    });
+
+    // Hover effect for leader images
+    leaderCards.forEach(card => {
+      const image = card.querySelector('.leader-image');
+      
+      card.addEventListener('mouseenter', () => {
+        image.style.transform = 'scale(1.1) rotate(5deg)';
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        image.style.transform = 'scale(1) rotate(0deg)';
+      });
+    });
+
+    // Add ripple effect to buttons
+    document.querySelectorAll('.cta-button, .contact-btn').forEach(button => {
+      button.addEventListener('click', function(e) {
+        // Remove existing ripples
+        const existingRipples = this.querySelectorAll('.ripple');
+        existingRipples.forEach(ripple => ripple.remove());
+        
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
+    // Add floating animation to leader cards
+    leaderCards.forEach((card, index) => {
+      card.style.animation = `float 3s ease-in-out ${index * 0.2}s infinite alternate`;
+    });
+
+    // Add particle effect to header
+    function createParticles() {
+      const header = document.querySelector('header');
+      const particlesContainer = document.createElement('div');
+      particlesContainer.className = 'particles-container';
+      particlesContainer.style.position = 'absolute';
+      particlesContainer.style.top = '0';
+      particlesContainer.style.left = '0';
+      particlesContainer.style.width = '100%';
+      particlesContainer.style.height = '100%';
+      particlesContainer.style.pointerEvents = 'none';
+      particlesContainer.style.overflow = 'hidden';
+      particlesContainer.style.zIndex = '1';
+      
+      header.appendChild(particlesContainer);
+      
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.style.position = 'absolute';
+        particle.style.width = '4px';
+        particle.style.height = '4px';
+        particle.style.background = 'var(--primary)';
+        particle.style.borderRadius = '50%';
+        particle.style.opacity = Math.random() * 0.6 + 0.2;
+        
+        const startX = Math.random() * 100;
+        const startY = Math.random() * 100;
+        
+        particle.style.left = `${startX}%`;
+        particle.style.top = `${startY}%`;
+        
+        particlesContainer.appendChild(particle);
+        
+        // Animate particle
+        animateParticle(particle, startX, startY);
+      }
+    }
+    
+    function animateParticle(particle, startX, startY) {
+      const duration = Math.random() * 10 + 10;
+      
+      const animation = particle.animate([
+        { 
+          transform: 'translate(0, 0)', 
+          opacity: particle.style.opacity 
+        },
+        { 
+          transform: `translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px)`, 
+          opacity: 0 
+        }
+      ], {
+        duration: duration * 1000,
+        iterations: Infinity,
+        direction: 'alternate',
+        easing: 'ease-in-out'
+      });
+    }
+    
+    // Initialize particles when page loads
+    window.addEventListener('load', createParticles);
+
+    // Add smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add loading animation
+    window.addEventListener('load', function() {
+      document.body.classList.add('loaded');
+    });
+
+    // Add CSS for loading state
+    const loadingStyle = document.createElement('style');
+    loadingStyle.textContent = `
+      body {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      
+      body.loaded {
+        opacity: 1;
+      }
+    `;
+    document.head.appendChild(loadingStyle);
+
+    // Add interactive background elements
+    function createInteractiveBackground() {
+      const interactiveBg = document.createElement('div');
+      interactiveBg.style.position = 'fixed';
+      interactiveBg.style.top = '0';
+      interactiveBg.style.left = '0';
+      interactiveBg.style.width = '100%';
+      interactiveBg.style.height = '100%';
+      interactiveBg.style.pointerEvents = 'none';
+      interactiveBg.style.zIndex = '-1';
+      interactiveBg.style.overflow = 'hidden';
+      
+      document.body.appendChild(interactiveBg);
+      
+      // Create floating elements
+      for (let i = 0; i < 15; i++) {
+        const floatElement = document.createElement('div');
+        floatElement.style.position = 'absolute';
+        floatElement.style.width = '20px';
+        floatElement.style.height = '20px';
+        floatElement.style.background = 'var(--primary)';
+        floatElement.style.borderRadius = '50%';
+        floatElement.style.opacity = '0.1';
+        floatElement.style.filter = 'blur(2px)';
+        
+        const startX = Math.random() * 100;
+        const startY = Math.random() * 100;
+        
+        floatElement.style.left = `${startX}%`;
+        floatElement.style.top = `${startY}%`;
+        
+        interactiveBg.appendChild(floatElement);
+        
+        // Animate floating element
+        animateFloatElement(floatElement);
+      }
+    }
+    
+    function animateFloatElement(element) {
+      const duration = Math.random() * 20 + 20;
+      
+      element.animate([
+        { transform: 'translate(0, 0) scale(1)' },
+        { transform: `translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) scale(${Math.random() * 0.5 + 0.5})` }
+      ], {
+        duration: duration * 1000,
+        iterations: Infinity,
+        direction: 'alternate',
+        easing: 'ease-in-out'
+      });
+    }
+    
+    // Initialize interactive background
+    createInteractiveBackground();
+
+    console.log('Leadership page loaded successfully!');
+  </script>
+
+</body>
+</html>
